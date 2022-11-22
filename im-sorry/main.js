@@ -38,7 +38,7 @@ function $(id){
  */
 function peroAmame(){
     // Se le da play al audio
-    const audio = new Audio('song.mp3')
+    const audio = new Audio('/im-sorry/song.mp3')
     audio.volume = 0.1
     audio.play()
 
