@@ -13,8 +13,10 @@
     max-width: 80vw;
 }
 
-.jeb-message {
+.jeb-contain {
     display: flex;
-    gap: 16px
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
 }
 
