@@ -1,0 +1,99 @@
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+
+@keyframes twinkle {
+    0% {
+        transform: scale(1, 1);
+        background: rgba(255,255,255,0.0);
+        animation-timing-function: ease-in;
+    }
+    60% {
+        transform: scale(0.8, 0.8);
+        background: rgba(255,255,255,1);
+        animation-timing-function: ease-out;
+    }
+    80% {
+        background: rgba(255,255,255,0.00);
+        transform: scale(1, 1);
+    }
+    100% {
+        background: rgba(255,255,255,0.0);
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes twinkle-text {
+    0% {
+        color: rgba(255,255,255,0.75);
+        animation-timing-function: ease-in;
+    }
+    60% {
+        color: rgba(255,255,255,1);
+        animation-timing-function: ease-out;
+    }
+    80% {
+        color: rgba(255,255,255,0.75);
+    }
+    100% {
+        color: rgba(255,255,255,0.75);
+    }
+}
+  
+:root{
+    --midnight-blue: #15253f;
+    --side: 50vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: all ease;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255,255,255,0.0);
+    border-radius: 5px;
+}
+
+.cool-text {
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    animation: twinkle-text 5s infinite linear alternate;
+}
+
+#mainContainer {
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-select: none;
+
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom,black, var(--midnight-blue) 90%);
+}
+
+.clockBackground {
+    background-image: url('./cbsd.png');
+    background-size: cover;
+    position: relative;
+    width: var(--side);
+    height: var(--side);
+}
+
+.clock-arrow {
+    width: 100%;
+    object-fit: cover;
+    transform: translate(5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+}

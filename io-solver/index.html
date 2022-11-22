@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+    <link 
+        rel="stylesheet" 
+        href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css"
+    >
+    <title>Solucionador de IO</title>
+</head>
+<body>
+    <main class="container">
+        <div class="headings">
+            <h1>Solucionador de IO</h1>
+            <h3>Para Unidad 5</h3>
+        </div>
+        <div>
+            <label for="txtUT">
+                Unidad de tiempo:
+                <input type="text" id="txtUT" value="horas">
+            </label>
+
+            <div class="flex">
+                <label for="txtLambda">
+                    λ:
+                    <input type="number" value="0" id="txtLambda">
+                </label>
+            
+                <label for="txtMiu">
+                    μ:
+                    <input type="number" value="0" id="txtMiu">
+                </label>
+
+                <label for="txtSer">
+                    s:
+                    <input type="number" value="1" id="txtSer">
+                </label>
+            </div>
+            
+            <div class="flex">
+                <label for="txtN">
+                    n:
+                    <input type="number" value="0" id="txtN">
+                </label>
+                
+                <label for="txtK">
+                    k:
+                    <input type="number" value="0" id="txtK">
+                </label>
+            </div>
+            
+            <button id="btnCalc" disabled>Calcular</button>
+        </div>
+
+        <figure>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="6">Resultados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2" id="lblLambda"></td>
+                        <td colspan="2" id="lblMiu"></td>
+                        <td colspan="2" id="lblRho"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="lblFEntrada"></td>
+                        <td colspan="3" id="lblFSalida"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="lblSystemLength"></td>
+                        <td colspan="3" id="lblQueueLength"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="lblSystemWait"></td>
+                        <td colspan="3" id="lblQueueWait"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="lblPo"></td>
+                        <td colspan="2" id="lblPn"></td>
+                        <td colspan="2" id="lblPk"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </figure>
+    </main>
+    <script src="./main.js" type="module"></script>
+</body>
+</html>
