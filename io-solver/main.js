@@ -65,8 +65,11 @@ function canCalculate(){
     const m = valueOf('txtMiu')
     const s = valueOf('txtSer')
 
-    // Todo es positivo y miu es mayor a lambda
-    return l > 0 && m > 0 && m > l && s > 0 
+    // Todo es positivo y el factor de utilización tiene que ser menor a 1
+    // (sino empiezan a dar resultados negativos)
+    const allPositive = l > 0 && m > 0 && s > 0
+    const goodRho = l / (s * m) < 1
+    return allPositive && goodRho
 }
 
 function changeDisabled(){
